@@ -3,7 +3,7 @@ import { products } from "../assets/assets";
 
 export const ShopContext = createContext();
 
-const ShopCcntextProvider = (props) => {
+const ShopContextProvider = (props) => {
 
     const currency = '$';
     const delivery_fee = 10;
@@ -18,4 +18,4 @@ const ShopCcntextProvider = (props) => {
         </ShopContext.Provider>
     )
 }
-export default ShopCcntextProvider;
+export default ShopContextProvider;
