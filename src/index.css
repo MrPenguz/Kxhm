@@ -3,7 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+::selection {
+  background: red;
+}
 a.active hr{
    
     display: block;
