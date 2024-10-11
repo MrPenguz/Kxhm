@@ -2,9 +2,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+  }
+  
 ::selection {
-  background: red;
+  background: gray;
 }
 a.active hr{
    
@@ -26,3 +37,4 @@ a.active:hover{
     font-weight: 400;
     font-style: normal;
 }
+

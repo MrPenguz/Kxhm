@@ -6,7 +6,7 @@ import OurPolicy from '../components/OurPolicy'
 import NewsLetter from '../components/NewsLetter'
 const Home = () => {
     return (
-        <div>
+        <div >
             <Hero />
             <LatestCollection />
             <BestSeller />
