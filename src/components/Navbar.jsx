@@ -4,14 +4,14 @@ import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const { setShowSearch } = useContext(ShopContext)
+    const { setShowSearch, getCartCount } = useContext(ShopContext)
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
             <Link to={'/'}><img src={assets.logo} className='w-36' alt="" /></Link>
             <ul className='hidden sm:flex gap-5 text-sm text-gray-700 '>
-                <NavLink to='/' className='flex flex-col items-center gap-1 ' >
+                <NavLink to='/' className='flex flex-col items-center gap-1  ' >
                     <p className=' uppercase'>Home</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden ' />
+                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden  ' />
                 </NavLink>
                 <NavLink to='/collection' className='flex flex-col items-center gap-1  ' >
                     <p className=' uppercase'>Collection</p>
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </div>
                 <Link to='/cart' className='relative'>
                     <img src={assets.cart_icon} className='w-5 cursor-pointer' alt="" />
-                    <p className=' absolute right-[-5px] bottom-[-7px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[10px]'>10</p>
+                    <p className=' absolute right-[-5px] bottom-[-7px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[10px]'>{getCartCount()}</p>
                 </Link>
                 <img onClick={() => setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden' alt="" />
             </div>
