@@ -77,7 +77,7 @@ const Product = () => {
                         else {
                             return;
                         }
-                    }} className={`px-8 py-3 bg-black text-gray-100 text-xl uppercase ${buttonCheck ? 'active:bg-gray-700' : 'bg-gray-500'}`} disabled={!buttonCheck}>Add to cart</button>
+                    }} className={`px-8 py-3 bg-black text-gray-100 text-xl uppercase ${buttonCheck ? 'active:bg-gray-700' : 'bg-gray-500'}`} disabled={!buttonCheck}>Add To Cart</button>
 
                     <hr className='mt-8 sm:w-4/5' />
                     <div className="text-base text-gray-500 mt-5 flex flex-col gap-1">
