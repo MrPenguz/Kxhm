@@ -28,7 +28,7 @@ const Cart = () => {
                 <Title text1={'YOUR'} text2={'CART'} />
             </div>
 
-            <div className="">
+            <div className="flex items-center">
                 {
                     cartData.map((item, index) => {
                         const productData = products.find((product) => product._id === item._id);

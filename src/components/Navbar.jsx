@@ -4,16 +4,17 @@ import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const { setShowSearch, getCartCount } = useContext(ShopContext)
+    const { setShowSearch, getCartCount, navigate } = useContext(ShopContext);
+    const [active, setActive] = useState('Home');
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
             <Link to={'/'}><img src={assets.logo} className='w-36' alt="" /></Link>
             <ul className='hidden sm:flex gap-5 text-sm text-gray-700 '>
-                <NavLink to='/' className='flex flex-col items-center gap-1  ' >
+                <NavLink to='/' className='flex flex-col items-center gap-1    ' >
                     <p className=' uppercase'>Home</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden  ' />
+                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden   ' />
                 </NavLink>
-                <NavLink to='/collection' className='flex flex-col items-center gap-1  ' >
+                <NavLink to='/collection' className='flex flex-col items-center gap-1 ' >
                     <p className=' uppercase'>Collection</p>
                     <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
                 </NavLink>
@@ -29,11 +30,11 @@ const Navbar = () => {
             <div className="flex items-center gap-6">
                 <img onClick={() => setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />
                 <div className=" group relative">
-                    <img src={assets.profile_icon} className='w-5 cursor-pointer' alt="" />
-                    <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 ">
+                    <Link to={'/login'}><img src={assets.profile_icon} className='w-5 cursor-pointer' alt="" /></Link>
+                    <div className="sm:group-hover:block  hidden absolute dropdown-menu right-0 pt-4 ">
                         <div className="flex flex-col gap-2  w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded ">
                             <p className='cursor-pointer hover:text-black'>My Profile</p>
-                            <p className='cursor-pointer hover:text-black'>Orders</p>
+                            <p onClick={() => navigate('/orders')} className='cursor-pointer hover:text-black'>Orders</p>
                             <p className='cursor-pointer hover:text-black'>Logout</p>
 
                         </div>
@@ -53,10 +54,22 @@ const Navbar = () => {
                         <p>Back</p>
                     </div>
 
-                    <NavLink onClick={() => setVisible(false)} className='uppercase py-2 pl-6 border' to='/'>Home</NavLink>
-                    <NavLink onClick={() => setVisible(false)} className='uppercase py-2 pl-6 border' to='/collection'>Collection</NavLink>
-                    <NavLink onClick={() => setVisible(false)} className='uppercase py-2 pl-6 border' to='/about'>About</NavLink>
-                    <NavLink onClick={() => setVisible(false)} className='uppercase py-2 pl-6 border' to='/contact'>Contact</NavLink>
+                    <NavLink onClick={() => {
+                        setVisible(false)
+                        setActive('Home')
+                    }} className={`uppercase py-2 pl-6 border ${active === 'Home' ? 'bg-black text-white' : ''}  `} to='/'>Home</NavLink>
+                    <NavLink onClick={() => {
+                        setVisible(false)
+                        setActive('Collection')
+                    }} className={`uppercase py-2 pl-6 border ${active === 'Collection' ? 'bg-black text-white' : ''}  `} to='/collection'>Collection</NavLink>
+                    <NavLink onClick={() => {
+                        setVisible(false)
+                        setActive('About')
+                    }} className={`uppercase py-2 pl-6 border ${active === 'About' ? 'bg-black text-white' : ''}  `} to='/about'>About</NavLink>
+                    <NavLink onClick={() => {
+                        setVisible(false)
+                        setActive('Contact')
+                    }} className={`uppercase py-2 pl-6 border ${active === 'Contact' ? 'bg-black text-white' : ''}  `} to='/contact'>Contact</NavLink>
 
                 </div>
             </div>
