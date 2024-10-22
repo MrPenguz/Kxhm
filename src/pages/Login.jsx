@@ -6,7 +6,7 @@ const Login = () => {
         e.preventDefault();
     }
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <form onSubmit={onSubmitHandler} className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14  gap-4 text-black'>
                 <div className="inline-flex items-center gap-2 mb-2 mt-10">
                     <p className='prata-regular text-3xl'>{currentState}</p>
@@ -24,7 +24,7 @@ const Login = () => {
                 </div>
                 <button className='bg-black font-light hover:bg-gray-600 active:bg-black text-xl text-white py-3 px-8 w-[100%]'>{currentState === 'Login' ? 'Sign In' : 'Sign Up'}</button>
             </form>
-        </motion.div>
+        </div>
     )
 }
 

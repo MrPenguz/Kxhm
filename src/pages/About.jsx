@@ -5,7 +5,7 @@ import NewsLetter from '../components/NewsLetter'
 import { motion } from 'framer-motion';
 const About = () => {
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} end={{ opacity: 0 }}>
+        <div>
             <div className="text-2xl text-center pt-8 border-t">
                 <Title text1={'ABOUT'} text2={'US'} />
             </div>
@@ -36,7 +36,7 @@ const About = () => {
                 </div>
             </div>
             <NewsLetter />
-        </motion.div>
+        </div>
     )
 }
 

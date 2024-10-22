@@ -24,7 +24,7 @@ const Cart = () => {
 
     }, [cartItems,])
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} end={{ opacity: 0 }} className='border-t pt-14 '>
+        <div initial={{ opacity: 0 }} animate={{ opacity: 1 }} end={{ opacity: 0 }} className='border-t pt-14 '>
             <div className="text-2xl mb-3 ">
                 <Title text1={'YOUR'} text2={'CART'} />
             </div>
@@ -91,7 +91,7 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 

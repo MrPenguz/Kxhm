@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Orders = () => {
     const { products, currency } = useContext(ShopContext);
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='border-t pt-16'>
+        <div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='border-t pt-16'>
             <div className="text-2xl">
                 <Title text1={"MY"} text2={"ORDERS"} />
             </div>
@@ -35,7 +35,7 @@ const Orders = () => {
                     </div>
                 })
             }</div>
-        </motion.div>
+        </div>
     )
 }
 
