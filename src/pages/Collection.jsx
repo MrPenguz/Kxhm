@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import Title from '../components/Title';
 import ProductItem from '../components/ProductItem';
+import { motion } from 'framer-motion';
 
 const Collection = () => {
     const { products, search, showSearch } = useContext(ShopContext);
@@ -77,7 +78,7 @@ const Collection = () => {
     }, [category, subCategory, search, showSearch, sortType, products]);
 
     return (
-        <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t ">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} end={{ opacity: 0 }} className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t ">
             {/* Filter Options */}
             <div className="min-w-60">
                 <p
@@ -196,7 +197,7 @@ const Collection = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

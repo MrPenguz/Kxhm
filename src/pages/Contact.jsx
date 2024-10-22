@@ -2,10 +2,10 @@ import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'
 import NewsLetter from '../components/NewsLetter'
-
+import { motion } from 'framer-motion';
 const Contact = () => {
     return (
-        <div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} end={{ opacity: 0 }}>
             <div className="text-center text-2xl pt-10 border-t">
                 <Title text1={'CONTACT'} text2={'US'} />
             </div>
@@ -22,7 +22,7 @@ const Contact = () => {
                 </div>
             </div>
             <NewsLetter />
-        </div>
+        </motion.div>
     )
 }
 

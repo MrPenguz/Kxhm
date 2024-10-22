@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext'
 import Title from '../components/Title';
 import { assets } from '../assets/assets';
 import CartTotal from '../components/CartTotal';
+import { motion } from 'framer-motion';
 const Cart = () => {
     const { products, currency, cartItems, updateQuantity, AddToCart, RemoveFromCart, navigate } = useContext(ShopContext);
     const [cartData, setCartData] = useState([]);
@@ -23,7 +24,7 @@ const Cart = () => {
 
     }, [cartItems,])
     return (
-        <div className='border-t pt-14 '>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} end={{ opacity: 0 }} className='border-t pt-14 '>
             <div className="text-2xl mb-3 ">
                 <Title text1={'YOUR'} text2={'CART'} />
             </div>
@@ -90,7 +91,7 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

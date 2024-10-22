@@ -3,12 +3,12 @@ import Title from '../components/Title'
 import CartTotal from '../components/CartTotal'
 import { assets } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext'
-
+import { motion } from 'framer-motion'
 const Placeorder = () => {
     const [method, setMethod] = useState('cod');
     const { navigate } = useContext(ShopContext);
     return (
-        <div className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t'>
             {/* left */}
             <div className="flex flex-col gap-4 w-full max-w-[480px]">
                 <div className="text-xl sm:text-2xl my-3">
@@ -58,7 +58,7 @@ const Placeorder = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </ motion.div>
     )
 }
 

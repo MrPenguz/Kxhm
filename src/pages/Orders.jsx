@@ -2,11 +2,11 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from '../components/Title';
 import { assets } from '../assets/assets';
-
+import { motion } from 'framer-motion';
 const Orders = () => {
     const { products, currency } = useContext(ShopContext);
     return (
-        <div className='border-t pt-16'>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='border-t pt-16'>
             <div className="text-2xl">
                 <Title text1={"MY"} text2={"ORDERS"} />
             </div>
@@ -35,7 +35,7 @@ const Orders = () => {
                     </div>
                 })
             }</div>
-        </div>
+        </motion.div>
     )
 }
 
