@@ -52,7 +52,11 @@ const Navbar = () => {
                 <img onClick={() => setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden' alt="" />
             </div>
             {/* Sidebar menu for smaller screen */}
-            <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all duration-300 ${visible ? 'w-full' : 'w-0'}`}>
+            <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: visible ? '100%' : '0' }}
+                transition={{ duration: 0.2 }}
+                className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white z-50`}>
                 <div className="flex flex-col text-gray-600">
                     <div onClick={() => setVisible(false)} className="flex items-center justify-center gap-4 p-3 bg-gray-100 cursor-pointer">
                         <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="" />
@@ -84,7 +88,8 @@ const Navbar = () => {
                         Contact
                     </NavLink>
                 </div>
-            </div>
+            </motion.div>
+
         </div>
     );
 }
