@@ -13,7 +13,7 @@ const Home = () => {
             <BestSeller />
             <OurPolicy />
             <NewsLetter />
-        </motion.div>
+        </motion.div >
     )
 }
 
