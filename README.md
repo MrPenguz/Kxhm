@@ -21,7 +21,7 @@ To run this application, make sure you have **Node.js** installed on your system
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/kxhm.store.git
+   git clone https://github.com/MrPenguz/Kxhm
    cd kxhm.store
 2. **Install Dependencies**
  To install all required packages from the `package.json` file, run the following command:
