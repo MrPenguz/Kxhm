@@ -48,7 +48,3 @@ npm install
 - **React**: For building the user interface.
 - **Framer Motion**: For adding animations and transitions to enhance the user experience.
 - **React Router**: For handling navigation within the application.
-## License
-
-This project is open source and available under the MIT License.
->>>>>>> 1c41d9e (added icon)
