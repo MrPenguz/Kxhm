@@ -20,6 +20,14 @@ To run this application, make sure you have **Node.js** installed on your system
    cd kxhm.store
 2. **Install Dependencies**
  To install all required packages from the `package.json` file, run the following command:
-
 ```bash
 npm install
+```
+## Running the Application
+
+3. **Run the Application**
+   To start the app locally, use the following command:
+   ```bash
+   npm start
+
+
