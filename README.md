@@ -11,8 +11,6 @@ front-end application! This project is an e-commerce platform designed to provid
 - [Running the Application](#running-the-application)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [License](#license)
-
 ## Prerequisites
 
 To run this application, make sure you have **Node.js** installed on your system. [Download Node.js](https://nodejs.org/) if you haven’t already.
